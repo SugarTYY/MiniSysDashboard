@@ -144,16 +144,6 @@ docker-compose up -d
 *   **采集间隔**: 默认为 `1秒`
 *   **数据保留**: 默认为 `7天`
 
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-1.  Fork 本仓库
-2.  创建您的特性分支 (`git checkout -b feature/AmazingFeature`)
-3.  提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
-4.  推送到分支 (`git push origin feature/AmazingFeature`)
-5.  开启一个 Pull Request
-
 ## 📄 开源协议
 
 本项目采用 [MIT 协议](LICENSE)。

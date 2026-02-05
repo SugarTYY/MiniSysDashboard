@@ -168,26 +168,35 @@ function App() {
                 ))}
               </div>
               
-              <div className="flex items-center gap-2 border-l pl-4 border-gray-200 ml-2">
-                 <div className="flex items-center gap-2">
-                   <input 
-                     type="datetime-local" 
-                     className="border border-gray-200 rounded px-2 py-1.5 text-xs focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-                     onChange={(e) => setCustomStartTime(new Date(e.target.value).getTime())}
-                   />
-                   <span className="text-gray-400">-</span>
-                   <input 
-                     type="datetime-local" 
-                     className="border border-gray-200 rounded px-2 py-1.5 text-xs focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-                     onChange={(e) => setCustomEndTime(new Date(e.target.value).getTime())}
-                   />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 border-t md:border-t-0 md:border-l pt-3 md:pt-0 pl-0 md:pl-4 border-gray-200 md:ml-2 w-full md:w-auto">
+                 <div className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
+                   <div className="w-full sm:w-auto">
+                     <span className="sm:hidden text-xs text-gray-500 mb-1 block">开始时间</span>
+                     <input 
+                       type="datetime-local" 
+                       className="w-full sm:w-auto border border-gray-200 rounded px-2 py-1.5 text-xs focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+                       onChange={(e) => setCustomStartTime(new Date(e.target.value).getTime())}
+                     />
+                   </div>
+                   
+                   <span className="hidden sm:inline text-gray-400">-</span>
+                   
+                   <div className="w-full sm:w-auto">
+                     <span className="sm:hidden text-xs text-gray-500 mb-1 block">结束时间</span>
+                     <input 
+                       type="datetime-local" 
+                       className="w-full sm:w-auto border border-gray-200 rounded px-2 py-1.5 text-xs focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+                       onChange={(e) => setCustomEndTime(new Date(e.target.value).getTime())}
+                     />
+                   </div>
                  </div>
                  <button 
                    onClick={handleCustomQuery}
-                   className="p-1.5 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors"
+                   className="w-full sm:w-auto p-1.5 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors flex justify-center items-center mt-2 sm:mt-0"
                    title="查询"
                  >
                    <RefreshCw className="w-4 h-4" />
+                   <span className="ml-2 sm:hidden text-xs">执行查询</span>
                  </button>
               </div>
             </div>

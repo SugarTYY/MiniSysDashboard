@@ -105,6 +105,8 @@ func (h *Handler) HandleSSE(c *gin.Context) {
 	c.Writer.Header().Set("Cache-Control", "no-cache")
 	c.Writer.Header().Set("Connection", "keep-alive")
 	c.Writer.Header().Set("Transfer-Encoding", "chunked")
+	// 禁用 Nginx 缓冲
+	c.Writer.Header().Set("X-Accel-Buffering", "no")
 
 	clientChan := make(chan string)
 	h.mu.Lock()

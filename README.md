@@ -6,7 +6,8 @@
 ![Docker](https://img.shields.io/badge/Deploy-Docker-2496ED.svg)
 ![AI Assisted](https://img.shields.io/badge/AI%20Assisted-Trae-6F42C1.svg)
 
-> 本项目由 [Trae AI](https://www.trae.ai) 辅助开发。
+> 本项目由 [Trae AI](https://www.trae.ai) 开发。
+> 
 
 一个专为 **NAS**、**迷你主机**（如 N100、树莓派等）和**低功耗服务器**设计的轻量级系统监控仪表板。
 
